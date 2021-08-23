@@ -96,6 +96,14 @@ with =org-support-shift-select=.
 Unsure how it works on emacs, is it C-s? What about replace?
 Please recommend some tutorial on this?
 
+Below are some commands for replacing
+#+BEGIN_SRC emacs-lisp
+  query-replace 		        ;; C-M-%
+  query-replace-regexp			;; M-%
+  replace-string
+  replace-regexp
+#+END_SRC
+
 ** QUESTION [C] Working with windows 
 
 I currently use <Remove other windows> from File menu.
@@ -134,6 +142,11 @@ Imagine I needed something like
 ~emacs README.md --run "C-c C-e h h"
 
 How would it do it? Using emacs lisp?
+#+BEGIN_SRC sh
+  emacs README.md --eval="<expr>"
+  # Example
+  emacs README.md --eval="(message \"Hello World\")"
+#+END_SRC
 
 ** Refresh file from disk
 
@@ -276,6 +289,7 @@ periods to your personal optimum./
 ** QUESTION Calendar
 
 How to view calendar (it was popping up accidantally when I hit something wrong).
+~calendar~ command opens the calendar
 
 ** Other actions
 
